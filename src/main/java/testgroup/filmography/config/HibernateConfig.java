@@ -1,6 +1,6 @@
 package testgroup.filmography.config;
 
-import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -36,7 +36,7 @@ public class HibernateConfig {
 
     @Bean
     public DataSource dataSource() {
-        BasicDataSource dataSource = new BasicDataSource();
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
         dataSource.setUrl(environment.getRequiredProperty("jdbc.url"));
         dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
