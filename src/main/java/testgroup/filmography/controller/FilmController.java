@@ -18,15 +18,6 @@ public class FilmController {
     @Autowired
     private FilmService filmService;
 
-
-
-//    @RequestMapping(value = "/edit", method = RequestMethod.GET)
-//    public ModelAndView editPage() {
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("editPage");
-//        return modelAndView;
-//    }
-
     @GetMapping
     public String allFilms(Model model) {
         List<Film> films = filmService.allFilms();
