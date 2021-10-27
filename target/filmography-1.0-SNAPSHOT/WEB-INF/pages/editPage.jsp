@@ -29,12 +29,16 @@
     </c:if>
     <label for="title">Title</label>
     <input type="text" name="title" id="title">
+
     <label for="year">Year</label>
     <input type="text" name="year" id="year">
+
     <label for="genre">Genre</label>
     <input type="text" name="genre" id="genre">
+
     <label for="watched">Watched</label>
     <input type="text" name="watched" id="watched">
+
     <c:if test="${empty film.title}">
         <input type="submit" value="Add new film">
     </c:if>
