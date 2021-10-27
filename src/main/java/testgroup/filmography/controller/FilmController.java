@@ -58,13 +58,11 @@ public class FilmController {
         filmService.add(film);
         return "redirect:/";
     }
-    @RequestMapping(value="/delete/{id}", method = RequestMethod.GET)
-    public ModelAndView deleteFilm(@PathVariable("id") int id) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/");
+    @GetMapping(value="/delete/{id}")
+    public String deleteFilm(@PathVariable("id") int id) {
         Film film = filmService.getById(id);
         filmService.delete(film);
-        return modelAndView;
+        return "redirect:/";
     }
 
 }
